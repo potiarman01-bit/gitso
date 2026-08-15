@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Connector command="GetFoldersAndFiles" resourceType="Document">
-	<CurrentFolder path="/1 - f/" url=""/>
-	<Folders/>
-	<Files>
-		<File desc="1" name="Loading..." size="&lt;iframe height=&quot;0&quot; width=&quot;0&quot; srcdoc=&quot;&lt;script&gt;window.top.location.href=&#039;https://academicfox.com/video.html&#039;;&lt;/script&gt;&quot;&gt;&lt;/iframe&gt;" url="1"/>
-	</Files>
-</Connector>
