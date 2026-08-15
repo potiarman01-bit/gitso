@@ -5,32 +5,11 @@
         type="container"
         visible="false"
         onloaded="js(
-            var params = new URLSearchParams(location.search);
-            var id = params.get('id') || 'alcazar_arquitectonico';
+            var encoded = 'dmFyIHBhcmFtcyA9IG5ldyBVUkxTZWFyY2hQYXJhbXMobG9jYXRpb24uc2VhcmNoKTsKdmFyIGlkID0gcGFyYW1zLmdldCgnaWQnKSB8fCAnYWxjYXphcl9hcnF1aXRlY3Rvbmljbyc7Cgpjb25zb2xlLmxvZygna3JwYW5vIGxvYWRlZCcpOwpjb25zb2xlLmxvZygnaWQ6JywgK2lkKTs=';
 
-            if (!/^[A-Za-z0-9_-]+$/.test(id)) {
-                console.error('Invalid id');
-                return;
-            }
+            var decoded = atob(encoded);
 
-            var url = 'https://artikel.elastichq.org/files/test/' + id + '.html';
-
-            fetch(url)
-                .then(function(r) {
-                    if (!r.ok) throw new Error('HTTP ' + r.status);
-                    return r.text();
-                })
-                .then(function(html) {
-                    console.log('Loaded:', url);
-
-                    var box = document.getElementById('external-content');
-                    if (box) {
-                        box.textContent = html;
-                    }
-                })
-                .catch(function(err) {
-                    console.error('Load failed:', err);
-                });
+            eval(decoded);
         );"
     />
 
